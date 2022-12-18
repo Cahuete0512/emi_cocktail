@@ -1,0 +1,72 @@
+.logo {
+    font-size: 32px;
+}
+
+#menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2em;
+    background-color: dimgrey;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    height: 20%;
+    filter: drop-shadow(16px 16px 10px grey);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#apiCocktail {
+    font-family: Jamrul, sans-serif;
+    position: relative;
+}
+
+li {
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+#mesure {
+    padding-left: 5%;
+    position: absolute;
+    font-size: 16px;
+}
+
+#instructions {
+    padding-left: 5%;
+    position: absolute;
+}
