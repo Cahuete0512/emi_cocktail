@@ -1,0 +1,32 @@
+footer{
+    /*width:auto;*/
+    /*display: flex;*/
+    /*list-style-type: none;*/
+    /*background: #eee;*/
+    /*!*padding: 100px 40px;*!*/
+    /*position: relative;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+
+    bottom:0;
+    grid-template-rows: auto 1fr auto;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #4d4d4d;
+    color: #fff;
+}
+
+#mentions_légales{
+    color: black;
+    font-size: smaller;
+    text-align: center;
+    margin: auto;
+}
+
+@media(min-width: 600px){
+    footer{
+        width: auto;
+        text-align: center;
+    }
+}
