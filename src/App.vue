@@ -13,5 +13,5 @@ export default {
 
 <style>
 @import url('../src/style/RandomStyle.css');
-
+@import url('../src/style/NavBarStyle.css');
 </style>
