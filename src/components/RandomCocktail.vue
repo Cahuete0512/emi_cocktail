@@ -1,9 +1,13 @@
 <template>
-    <div id="apiCocktail">
-      <div v-if="cocktail.strDrink">
-        <h1 class="title">Cocktails {{ cocktail.strDrink.toUpperCase() }}</h1>
+  <div class="card">
+    <div v-if="cocktail.strDrinkThumb" class="cocktailPicture">
+      <img v-bind:src="cocktail.strDrinkThumb" alt="photo du cocktail">
+    </div>
+    <div class="container">
+      <div class="title" v-if="cocktail.strDrink">
+        <h1>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h1>
       </div>&nbsp;
-      <div id="mesure">
+      <div class="content">
         <h3> Ingrédients : </h3>
         <ul>
           <li v-if="cocktail.strMeasure1 || cocktail.strIngredient1">
@@ -19,11 +23,6 @@
             {{ `${cocktail.strMeasure4} ${cocktail.strIngredient4}` }}
           </li>
         </ul>
-      </div>
-      <div v-if="cocktail.strDrinkThumb" class="cocktailPicture">
-        <img v-bind:src="cocktail.strDrinkThumb">
-      </div>
-      <div id="instructions">
         <h3> Instructions : </h3>
         <ol>
           <li v-if="cocktail.strInstructions">
@@ -40,19 +39,17 @@
         </ol>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
-
 import axios from 'axios'
-
 
 const apiURL =
     "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 export default {
-  components: {
-  },
+  components: {},
   data() {
     return {
       cocktail: {},
@@ -68,7 +65,7 @@ export default {
         const response = await axios.get(apiURL)
         console.log(response.data)
         // TODO : faire traitement pour ne récupérer que les données non null
-        if(response.data.drinks[0] !== null) {
+        if (response.data.drinks[0] !== null) {
           this.cocktail = response.data.drinks[0]
         }
       } catch (error) {

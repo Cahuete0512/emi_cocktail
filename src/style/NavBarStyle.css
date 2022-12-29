@@ -12,8 +12,10 @@
     background-color: #4d4d4d;
     position:fixed;
     z-index:1000;
+    bottom: 0;
     top: 0;
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    background-size: cover;
 }
 
 .nav > .nav-header {
@@ -43,7 +45,7 @@
     color: #eeeeee;
     font-size: 22px;
     display: inline-block;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 li {

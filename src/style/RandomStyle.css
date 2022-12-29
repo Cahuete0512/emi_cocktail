@@ -1,72 +1,57 @@
-.logo {
-    font-size: 32px;
-}
-
-#menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.2em;
-    background-color: dimgrey;
-    color: #fff;
-}
-
-body {
-    width: 100%;
-    background-color: lightgray;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    overflow-x: hidden;
-}
-
-img {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+/*--------------------------------------------------------!*CSS for card*!---------------------------------------------------------------*/
+.card {
     width: 20%;
-    height: 20%;
-    filter: drop-shadow(16px 16px 10px grey);
-    background-size: cover;
-    border-radius: 50%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 5px 20px #999;
+    justify-content: center;
 }
 
-#apiCocktail {
-    font-family: Jamrul, sans-serif;
+.card:hover .cocktailPicture img {
+    width: 60%;
+    filter: grayscale(0);
+    border-radius: 25% 10%;
+}
+
+/*--------------------------------------------------------!*CSS for image*!---------------------------------------------------------------*/
+
+.cocktailPicture {
+    height: 250px;
     position: relative;
+    overflow: hidden;
+}
+.cocktailPicture img {
+    width: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: grayscale(1);
+    transition-property: filter;
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
 
-li {
-    line-height: 1.5em;
-    margin-bottom: 10px;
+/*--------------------------------------------------------!*CSS for container card*!---------------------------------------------------------------*/
+
+.container {
+    text-align:center;
+    padding: 15px 20px;
+    box-sizing: border-box;
 }
 
-ul {
-    list-style-type: circle;
+/*--------------------------------------------------------!*CSS for content card*!---------------------------------------------------------------*/
+
+.title, .content {
+    font-family: 'Playfair Display', serif;
 }
 
 .title {
+    text-align:center;
+    text-transform:uppercase;
     font-weight: bold;
-    text-align: center;
 }
 
-h3 {
-    text-decoration: underline;
-}
-
-#mesure {
-    padding-left: 5%;
-    position: absolute;
-    font-size: 16px;
-}
-
-#instructions {
-    padding-left: 5%;
-    position: absolute;
+.content {
+    color: #777;
 }

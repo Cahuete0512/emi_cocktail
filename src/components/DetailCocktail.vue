@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: 'DetailCocktail'
+  name: 'DetailCocktail',
 }
 </script>
 
