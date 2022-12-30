@@ -1,10 +1,14 @@
 /*--------------------------------------------------------!*CSS for card*!---------------------------------------------------------------*/
 .card {
-    width: 40%;
-    margin: 0 auto;
+    width: 30%;
     background-color: white;
     box-shadow: 0 10px 40px #999;
     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .card:hover .cocktailPicture img {
@@ -51,9 +55,11 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: small;
 }
 
-.content {
+.card .content {
+    flex: 1 1 auto;
     color: #777;
     text-align: left;
 }

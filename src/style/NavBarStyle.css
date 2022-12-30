@@ -56,7 +56,7 @@ li {
 }
 
 .link:hover {
-    background-color: #ffea95;
+    background-color: darkorange;
     border-radius: 12px;
     height: 30px;
     color: #333333;
