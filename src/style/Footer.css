@@ -4,6 +4,8 @@ footer {
     overflow: hidden;
     left:0;
     height:100px;
+    bottom:0;
+    position: fixed;
 }
 
 footer p {
