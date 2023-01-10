@@ -58,24 +58,4 @@ export default {
 
 </script>
 
-<style>
-#demo {
-  font-family: "Helvetica", Arial, sans-serif;
-}
-.containerCocktail {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  border-radius: 200px;
-}
-
-.image{
-  width: 500px;
-  height: 500px;
- /* border-radius: 50%;*/
-  margin: 50px;
-}
-.image:hover{
-  filter: grayscale(100%);
-}
-</style>
+<style lang="css" scoped src="../style/AlcoolCocktailsStyle.css"></style>
