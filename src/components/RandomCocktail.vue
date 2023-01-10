@@ -27,6 +27,7 @@
       <div v-if="cocktail.strDrink" class="title">
         <h1>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h1>
       </div>&nbsp;
+<!--      TODO : Reformat date-->
       <div class="date" v-if="cocktail.dateModified">
         {{ cocktail.dateModified }}
       </div>&nbsp;
@@ -80,6 +81,7 @@
 
 <script>
 import axios from 'axios'
+import moment from 'moment';
 
 const apiURL =
     "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -109,6 +111,9 @@ export default {
         console.log(error);
       }
     },
+    dateReformat(value) {
+      return moment(value).format("DD-MM-YYYY");
+    }
   },
 };
 </script>

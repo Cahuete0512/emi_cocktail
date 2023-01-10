@@ -27,6 +27,13 @@ html, body {
     border-radius: 25% 10%;
 }
 
+@media screen and (max-width: 700px){
+    .card, .container > h1{
+        font-size: smaller;
+    }
+}
+
+
 /*--------------------------------------------------------!*CSS for image*!---------------------------------------------------------------*/
 
 .cocktailPicture {
@@ -66,6 +73,7 @@ html, body {
     text-transform: uppercase;
     font-weight: bold;
     font-size: small;
+    color: darkorange;
 }
 
 .card .content {
@@ -74,8 +82,9 @@ html, body {
     text-align: left;
 }
 
-.ingredient {
+h3 {
     list-style-type: circle;
+    color: darkorange;
 }
 
 /*--------------------------------------------------------!*CSS for content radio button*!---------------------------------------------------------------*/
