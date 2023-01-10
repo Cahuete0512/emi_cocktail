@@ -25,11 +25,11 @@
     </div>
     <div class="container">
       <div v-if="cocktail.strDrink" class="title">
-        <div>Cocktails {{ cocktail.strDrink.toUpperCase() }}</div>
+        <h3>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h3>
       </div>&nbsp;
       <!--      TODO : Reformat date-->
       <div class="date" v-if="cocktail.dateModified">
-        {{ cocktail.dateModified }}
+        {{ formatDate(cocktail.dateModified) }}
       </div>&nbsp;
       <div class="content">
         <div class="ingredient">
@@ -81,7 +81,8 @@
 
 <script>
 import axios from 'axios'
-import moment from 'moment';
+import dayjs from 'dayjs';
+
 
 const apiURL =
     "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -110,8 +111,10 @@ export default {
         console.log(error);
       }
     },
-    dateReformat(value) {
-      return moment(value).format("DD-MM-YYYY");
+    formatDate(dateString) {
+      const date = dayjs(dateString);
+      // Then specify how you want your dates to be formatted
+      return date.format('dddd D MMMM YYYY, hh:mm:ss');
     }
   },
 };
