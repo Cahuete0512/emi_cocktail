@@ -1,7 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import * as VueRouter from 'vue-router'
-import RandomCocktail from './components/RandomCocktail.vue'
+import RandomCocktail from './views/RandomCocktail.vue'
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
@@ -15,13 +15,13 @@ const router = VueRouter.createRouter({
         {
             path :'/alcoolCocktails',
             name: 'AlcoolCocktails',
-            component: () => import('@/components/AlcoolCocktails.vue')
+            component: () => import('@/views/AlcoolCocktails.vue')
         },
         {
             // FIXME : Ajouter /:id à la suite du endpoint pour avoir l'id dans l'url et surtout diriger vers un cocktail en particulier
             path :'/detailCocktail',
             name: 'DetailCocktail',
-            component: () => import('@/components/DetailCocktail.vue')
+            component: () => import('@/views/DetailCocktail.vue')
         }
     ]
 })
