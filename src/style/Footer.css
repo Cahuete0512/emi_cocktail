@@ -1,0 +1,16 @@
+footer {
+    width: 100%;
+    background-color: #333333;
+    overflow: hidden;
+    left:0;
+    height:100px;
+    bottom:0;
+    position: fixed;
+}
+
+footer p {
+    padding-top: 0.5em;
+    text-align: center;
+    color: #eeeeee;
+    font-size: smaller;
+}
