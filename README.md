@@ -1,4 +1,4 @@
-# training-app
+# emi_cocktail
 
 ## Project setup
 ```
