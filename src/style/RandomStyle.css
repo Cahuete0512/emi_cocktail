@@ -1,9 +1,9 @@
 /*--------------------------------------------------------!*RESET CSS*!---------------------------------------------------------------*/
 
 html, body {
-    margin:0;
-    padding:0;
-    height:100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     position: relative;
 }
 
@@ -27,9 +27,9 @@ html, body {
     border-radius: 25% 10%;
 }
 
-@media screen and (max-width: 700px){
-    .card, .container > h1{
-        font-size: smaller;
+@media screen and (max-width: 700px) {
+    .card, .container > .title {
+        font-size: small;
     }
 }
 

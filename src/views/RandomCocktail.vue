@@ -25,9 +25,9 @@
     </div>
     <div class="container">
       <div v-if="cocktail.strDrink" class="title">
-        <h1>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h1>
+        <div>Cocktails {{ cocktail.strDrink.toUpperCase() }}</div>
       </div>&nbsp;
-<!--      TODO : Reformat date-->
+      <!--      TODO : Reformat date-->
       <div class="date" v-if="cocktail.dateModified">
         {{ cocktail.dateModified }}
       </div>&nbsp;
@@ -102,7 +102,6 @@ export default {
       try {
         const response = await axios.get(apiURL)
         console.log(response.data)
-        // TODO : faire traitement pour ne récupérer que les données non null
         if (response.data.drinks[0] !== null && response.data.drinks[0] !== undefined) {
           this.cocktail = response.data.drinks[0]
           this.cocktail.selectedLangage = "english";
@@ -117,3 +116,5 @@ export default {
   },
 };
 </script>
+<!--FIXME: check why I no longer have a scroll bar-->
+<style lang="css" scoped src="../style/RandomStyle.css"></style>
