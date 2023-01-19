@@ -1,9 +1,9 @@
 /*--------------------------------------------------------!*RESET CSS*!---------------------------------------------------------------*/
 
 html, body {
-    margin:0;
-    padding:0;
-    height:100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
     position: relative;
 }
 
@@ -26,6 +26,13 @@ html, body {
     filter: grayscale(0);
     border-radius: 25% 10%;
 }
+
+@media screen and (max-width: 700px) {
+    .card, .container > .title {
+        font-size: small;
+    }
+}
+
 
 /*--------------------------------------------------------!*CSS for image*!---------------------------------------------------------------*/
 
@@ -65,7 +72,8 @@ html, body {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: small;
+    font-size: 16px;
+    color: darkorange;
 }
 
 .card .content {
@@ -74,8 +82,9 @@ html, body {
     text-align: left;
 }
 
-.ingredient {
+h3 {
     list-style-type: circle;
+    color: darkorange;
 }
 
 /*--------------------------------------------------------!*CSS for content radio button*!---------------------------------------------------------------*/

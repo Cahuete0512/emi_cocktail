@@ -25,10 +25,11 @@
     </div>
     <div class="container">
       <div v-if="cocktail.strDrink" class="title">
-        <h1>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h1>
+        <h3>Cocktails {{ cocktail.strDrink.toUpperCase() }}</h3>
       </div>&nbsp;
+      <!--      TODO : Reformat date-->
       <div class="date" v-if="cocktail.dateModified">
-        {{ cocktail.dateModified }}
+        {{ formatDate(cocktail.dateModified) }}
       </div>&nbsp;
       <div class="content">
         <div class="ingredient">
@@ -80,6 +81,8 @@
 
 <script>
 import axios from 'axios'
+import dayjs from 'dayjs';
+
 
 const apiURL =
     "https://www.thecocktaildb.com/api/json/v1/1/random.php";
@@ -100,7 +103,6 @@ export default {
       try {
         const response = await axios.get(apiURL)
         console.log(response.data)
-        // TODO : faire traitement pour ne récupérer que les données non null
         if (response.data.drinks[0] !== null && response.data.drinks[0] !== undefined) {
           this.cocktail = response.data.drinks[0]
           this.cocktail.selectedLangage = "english";
@@ -109,6 +111,13 @@ export default {
         console.log(error);
       }
     },
+    formatDate(dateString) {
+      const date = dayjs(dateString);
+      // Then specify how you want your dates to be formatted
+      return date.format('dddd D MMMM YYYY, hh:mm:ss');
+    }
   },
 };
 </script>
+<!--FIXME: check why I no longer have a scroll bar-->
+<style lang="css" scoped src="../style/RandomStyle.css"></style>
