@@ -3,7 +3,7 @@
     <div class="containerCocktail">
       <div v-for="cocktail in cocktails.drinks" :key="cocktail" class="cocktail" >
         <!-- <p>{{cocktail.strDrink}}</p>-->
-        <img class="image" v-bind:src="cocktail.strDrinkThumb" title="cliquez pour avoir la recette">
+       <a href="DetailCocktail.vue"><img class="image" v-bind:src="cocktail.strDrinkThumb" title="cliquez pour avoir la recette"> </a>
 
 
       </div>
