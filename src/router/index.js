@@ -14,9 +14,9 @@ const routes = [
         component: () => import('@/views/AlcoolCocktails.vue')
     },
     {
-
         path :'/detailCocktail/:id',
         name: 'DetailCocktail',
+        props: true,
         component: () => import('@/views/DetailCocktail.vue')
     },
 ];
