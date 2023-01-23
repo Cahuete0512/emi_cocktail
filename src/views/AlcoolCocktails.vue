@@ -3,11 +3,10 @@
     <div class="containerCocktail">
       <div v-for="cocktail in cocktails.drinks" :key="cocktail" class="cocktail" >
         <!-- <p>{{cocktail.strDrink}}</p>-->
+
         <RouterLink class="LinkDetail" :to="{name: 'DetailCocktail', params : {id: cocktail.idDrink}}">
           <img class="image" v-bind:src="cocktail.strDrinkThumb" title="cliquez pour avoir la recette">
         </RouterLink>
-
-
       </div>
     </div>
   </div>
