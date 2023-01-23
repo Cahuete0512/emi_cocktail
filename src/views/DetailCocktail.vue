@@ -7,7 +7,6 @@
       <div v-if="cocktail.strDrink" class="title">
         <div>Cocktails {{ cocktail.strDrink.toUpperCase() }}</div>
       </div>&nbsp;
-      <!--      TODO : Reformat date-->
       <div class="date" v-if="cocktail.dateModified">
         {{ cocktail.dateModified }}
       </div>&nbsp;
