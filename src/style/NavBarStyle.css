@@ -48,6 +48,7 @@
     margin-top: 10px;
 }
 
+
 li {
     text-decoration:none;
     display: inline;
@@ -62,11 +63,32 @@ li {
     color: #333333;
 }
 
+.orange {
+    background-color: darkorange;
+    border-radius: 12px;
+    height: 30px;
+    color: #333333;
+}
+
 .nav > #nav-check {
     display: none;
 }
 
-@media (max-width:700px) {
+.hidden{
+    display: none;
+}
+
+.langue {
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    margin-right: 1%;
+    background-color: #4d4d4d;
+    padding : 20px;
+}
+
+@media (max-width:800px) {
     .nav > .nav-btn {
         display: inline-block;
         position: absolute;
@@ -101,6 +123,11 @@ li {
     }
 
     .nav > .nav-links > .link {
+        display: none;
+        width: 100%;
+    }
+
+    .nav > .nav-links > .toggle {
         display: block;
         width: 100%;
     }

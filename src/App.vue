@@ -12,6 +12,16 @@ export default {
   components: {
     NavBar,
     Footer
+  },
+  data() {
+    return {
+       language: "english",
+    }
+  },
+  methods:{
+    updateLanguage(languageReceived){
+      this.language = languageReceived
+    }
   }
 }
 </script>
