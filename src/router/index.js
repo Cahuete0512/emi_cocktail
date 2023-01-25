@@ -14,9 +14,9 @@ const routes = [
         component: () => import('@/views/AlcoolCocktails.vue')
     },
     {
-        // FIXME : Ajouter /:id à la suite du endpoint pour avoir l'id dans l'url et surtout diriger vers un cocktail en particulier
-        path :'/detailCocktail',
+        path :'/detailCocktail/:id',
         name: 'DetailCocktail',
+        props: true,
         component: () => import('@/views/DetailCocktail.vue')
     },
 ];
